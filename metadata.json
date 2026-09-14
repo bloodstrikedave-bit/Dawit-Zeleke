@@ -1,0 +1,6 @@
+{
+  "name": "Happy 18th Birthday Mahi",
+  "description": "A romantic interactive 18th birthday experience and adventure crafted for Mahi (Mama).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

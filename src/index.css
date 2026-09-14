@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+.font-romantic {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-script {
+  font-family: 'Dancing Script', cursive;
+}
+
+/* Candle flame flicker */
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.95)) drop-shadow(0 0 16px rgba(239, 68, 68, 0.65));
+  }
+  25% {
+    transform: scale(1.09, 0.94) rotate(2deg);
+    filter: drop-shadow(0 0 9px rgba(251, 191, 36, 1)) drop-shadow(0 0 22px rgba(239, 68, 68, 0.8));
+  }
+  50% {
+    transform: scale(0.95, 1.06) rotate(-2deg);
+    filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.85)) drop-shadow(0 0 14px rgba(239, 68, 68, 0.55));
+  }
+  75% {
+    transform: scale(1.05, 0.98) rotate(1deg);
+    filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.95)) drop-shadow(0 0 20px rgba(239, 68, 68, 0.75));
+  }
+}
+
+.animate-flame {
+  animation: flameFlicker 0.6s infinite ease-in-out alternate;
+  transform-origin: bottom center;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(244, 63, 94, 0.35), inset 0 0 15px rgba(244, 63, 94, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(244, 63, 94, 0.75), inset 0 0 25px rgba(244, 63, 94, 0.35);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0714;
+}
+::-webkit-scrollbar-thumb {
+  background: #4c1d45;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #db2777;
+}
